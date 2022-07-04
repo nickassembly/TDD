@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "E/DBUJRe6i5WZ84nYeqpfFUKp45Q87Ku22/hx3jMs0oPJhqTMDG/IzBap4j9AHn4goc54VTCcBHGk/3jwJBGUQ==",
+  "dgSpecHash": "MlUMn/O4pdzcbZC9U/MPkcG7xebZJj3sOHwI6Z//WMmaTqw1PvgRZG9RhHQNcdE8wKfwZaRXkLBmrbM7Wh1fPA==",
   "success": true,
-  "projectFilePath": "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\TDD.Tests.csproj",
+  "projectFilePath": "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\TDD.Tests.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\nickg\\.nuget\\packages\\coverlet.collector\\3.1.0\\coverlet.collector.3.1.0.nupkg.sha512",
     "C:\\Users\\nickg\\.nuget\\packages\\microsoft.codecoverage\\16.11.0\\microsoft.codecoverage.16.11.0.nupkg.sha512",

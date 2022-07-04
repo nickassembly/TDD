@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\TDD.Tests.csproj": {}
+    "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\TDD.Tests.csproj": {}
   },
   "projects": {
-    "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\TDD.Tests.csproj": {
+    "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\TDD.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\TDD.Tests.csproj",
+        "projectUniqueName": "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\TDD.Tests.csproj",
         "projectName": "TDD.Tests",
-        "projectPath": "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\TDD.Tests.csproj",
+        "projectPath": "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\TDD.Tests.csproj",
         "packagesPath": "C:\\Users\\nickg\\.nuget\\packages\\",
-        "outputPath": "D:\\source\\repos\\Dotnet\\TDD\\TDD\\TDD.Tests\\obj\\",
+        "outputPath": "D:\\source\\repos\\Dotnet\\TDD\\TDD.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
