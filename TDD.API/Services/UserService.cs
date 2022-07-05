@@ -3,14 +3,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xunit;
 
-namespace TDD.Tests
+namespace TDD.API.Services
 {
-    public class Test
+    public interface IUserService
     {
-        [Fact]
-        public void NewTest()
+
+    }
+
+    public class UserService : IUserService
+    {
+        public UserService()
         {
 
         }
