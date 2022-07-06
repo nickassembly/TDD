@@ -17,7 +17,14 @@ namespace TDD.API.Controllers
         [HttpGet(Name = "GetUsers")]
         public async Task<IActionResult> Get()
         {
-            return Ok("all good");
+            var users = await _usersService.GetAllUsers();
+
+            if (users.Any())
+            {
+                return Ok(users);
+            }
+
+            return NotFound();
         }
     }
 }
