@@ -7,13 +7,20 @@ using TDD.API.Models;
 
 namespace TDD.API.Services
 {
-    public interface IUserService
+    public interface IUsersService
     {
         public Task<List<User>> GetAllUsers();
     }
 
-    public class UserService : IUserService
+    public class UsersService : IUsersService
     {
+        private readonly HttpClient _httpClient;
+
+        public UsersService(HttpClient httpClient)
+        {
+            _httpClient = httpClient;
+        }
+
         public Task<List<User>> GetAllUsers()
         {
             throw new NotImplementedException();

@@ -7,9 +7,9 @@ namespace TDD.API.Controllers
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IUserService _usersService;
+        private readonly IUsersService _usersService;
 
-        public UsersController(IUserService usersService)
+        public UsersController(IUsersService usersService)
         {
             _usersService = usersService;
         }
