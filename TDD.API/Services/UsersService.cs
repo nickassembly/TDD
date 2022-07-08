@@ -1,8 +1,10 @@
-﻿using System;
+﻿using Microsoft.Extensions.Options;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using TDD.API.Config;
 using TDD.API.Models;
 
 namespace TDD.API.Services
@@ -15,15 +17,26 @@ namespace TDD.API.Services
     public class UsersService : IUsersService
     {
         private readonly HttpClient _httpClient;
+        private readonly UsersApiOptions _apiConfig;
 
-        public UsersService(HttpClient httpClient)
+        public UsersService(HttpClient httpClient, IOptions<UsersApiOptions> apiConfig)
         {
             _httpClient = httpClient;
+            _apiConfig = apiConfig.Value;
         }
 
-        public Task<List<User>> GetAllUsers()
+        public async Task<List<User>> GetAllUsers()
         {
-            throw new NotImplementedException();
+            var usersResponse = await _httpClient.GetAsync(_apiConfig.Endpoint);
+            if (usersResponse.StatusCode == System.Net.HttpStatusCode.NotFound)
+            {
+                return new List<User>();
+            }
+
+            var responseContent = usersResponse.Content;
+            var allUsers = await responseContent.ReadFromJsonAsync<List<User>>();
+            return allUsers.ToList();
+
         }
     }
 }
