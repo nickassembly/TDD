@@ -74,22 +74,16 @@ namespace TDD.Tests.Systems.Services
         }
 
         [Fact]
-        // todo fix test
         public async Task GetAllUsers_WhenCalled_InvokesConfiguredExternalUrl()
         {
             // Arrange
             var expectedResponse = UsersFixture.GetTestUsers();
-            var endpoint = "https://example.com/users";
-            var handlerMock = MockHttpMessageHandler<User>.SetupBasicGetResourceList(expectedResponse, endpoint);
+            var handlerMock = MockHttpMessageHandler<User>.SetupBasicGetResourceList(expectedResponse);
             var httpClient = new HttpClient(handlerMock.Object);
-
-            var config = Options.Create(new UsersApiOptions
-            {
-                Endpoint = endpoint
-            });
-
+            var endpoint = "https://example.com/users";
+            var config = Options.Create(new UsersApiOptions { Endpoint = endpoint });
             var sut = new UsersService(httpClient, config);
-
+            
             // Act
             var result = await sut.GetAllUsers();
 
